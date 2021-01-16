@@ -12,14 +12,11 @@
             <th>Email</th>
           </tr>
         </thead>
-        <tbody>
-          <tr *ngFor="let user of users; index as i">
+        <tbody *ngFor="let user of users; index as i">
+          <tr>
             <td>{{ user.name }}</td>
             <td>{{ user.username }}</td>
             <td class="email" appHighlighter>{{ user.email }}</td>
-            <button class="button is-danger" (click)="handleDeleteEvent()">
-              Delete
-            </button>
           </tr>
         </tbody>
       </table>
